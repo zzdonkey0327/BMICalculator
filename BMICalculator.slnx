@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/方案項目/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="BMICalculator/BMICalculator.csproj" Id="e657cade-6f6e-4079-885c-0642cba5003d" />
+</Solution>
