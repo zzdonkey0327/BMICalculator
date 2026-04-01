@@ -1,4 +1,3 @@
-# BMI計算機
 # BMI & BMR 計算機 (Health Calculator)
 
 ## 專案簡介
@@ -25,7 +24,6 @@
 1. 輸入您的身高 (cm)、體重 (kg)、年齡，並選擇性別。
 2. 點擊「開始計算」或按 Enter 即可查看健康數據。
 3. 可以直接點選「清除重填」開始下一次的計算。
-<img width="608" height="724" alt="image" src="https://github.com/user-attachments/assets/34114172-b1c9-4c7c-b87d-48010d9571e7" />
-<img width="608" height="724" alt="image" src="https://github.com/user-attachments/assets/34114172-b1c9-4c7c-b87d-48010d9571e7" />
+<img width="300" height="350" alt="image" src="https://github.com/user-attachments/assets/34114172-b1c9-4c7c-b87d-48010d9571e7" />
 
 
