@@ -26,7 +26,7 @@ namespace BMICalculator
         {
 
         }
-
+        
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -68,7 +68,7 @@ namespace BMICalculator
                 string strResult = "";
                 Color colorResult = Color.Black;
                 int resultIndex = 0;
-
+      
                 if (bmi < 18.5)
                 {
                     resultIndex = 0;
@@ -84,7 +84,7 @@ namespace BMICalculator
                 else if (bmi < 30)
                 {
                     resultIndex = 3;
-                }
+    }
                 else if (bmi < 35)
                 {
                     resultIndex = 4;

@@ -166,6 +166,7 @@
             this.grpOutput.ResumeLayout(false);
             this.grpOutput.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -182,3 +183,4 @@
         private System.Windows.Forms.Button btnRun;
     }
 }
+
