@@ -43,6 +43,7 @@ namespace BMICalculator
             // 驗證輸入
             bool isHeightValid = double.TryParse(txtHeight.Text, out double height);
             bool isWeightValid = double.TryParse(txtWeight.Text, out double weight);
+            bool isAgeValid = int.TryParse(txtAge.Text, out int age);
 
             if (!isHeightValid || height <= 0)
             {
@@ -55,9 +56,21 @@ namespace BMICalculator
                 MessageBox.Show("體重輸入錯誤，請輸入大於 0 的有效數字。", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            // 計算 BMI
-            if (isHeightValid && isWeightValid)
+
+            if (!isAgeValid || age <= 0)
             {
+                MessageBox.Show("年齡輸入錯誤，請輸入大於 0 的有效數字。", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 計算 BMI 和 BMR
+            if (isHeightValid && isWeightValid && isAgeValid)
+            {
+                // 計算 BMR (Mifflin-St Jeor)
+                double bmr = 10 * weight + 6.25 * height - 5 * age;
+                bmr += rdoMale.Checked ? 5 : -161;
+                lblBMRResult.Text = $"{bmr:F1} kcal";
+
                 height /= 100;
 
                 double bmi = weight / (height * height);
@@ -104,7 +117,12 @@ namespace BMICalculator
             {   // 如果輸入無效，顯示錯誤訊息
                 MessageBox.Show("請輸入有效的數字。", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }        
-        }    
+        }
+
+        private void txtHeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
        
 }
